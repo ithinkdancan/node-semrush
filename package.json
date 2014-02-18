@@ -1,0 +1,33 @@
+{
+  "name": "node-semrush",
+  "description": "A SEMRush API library for Node.js",
+  "tags": [
+    "SEMRush",
+    "util"
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Daniel Tijerina",
+    "email": "ithinkdancan@gmail.com"
+  },
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ithinkdancan/node-semrush.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "scripts": {
+  },
+  "devDependencies": {
+    "nodeunit": ">=0.6.2"
+  },
+  "readme": "",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/ithinkdancan/node-semrush/issues"
+  },
+  "homepage": "https://github.com/ithinkdancan/node-semrush"
+}
