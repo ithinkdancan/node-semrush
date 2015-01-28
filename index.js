@@ -1,4 +1,4 @@
-var csv = require('csv');
+var parse = require('csv-parse');
 var extend = require('./extend');
 var querystring = require('querystring');
 var http = require('http');
@@ -115,8 +115,8 @@ module.exports = SEMRushAPI;
             if(urldata.indexOf('ERROR') === 0){
               cb(new Error('response.error:' + urldata), null);
             } else {
-              csv().from.string(urldata, {delimiter: ';', columns: true}).to.array(function(result){
-                cb(null, result);
+              csv(urldata, {delimiter: ';', columns: true}, function(err, output){
+                cb(null, output);
               });
             }
           })

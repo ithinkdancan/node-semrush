@@ -10,7 +10,9 @@
     "name": "Daniel Tijerina",
     "email": "ithinkdancan@gmail.com"
   },
-  "contributors": [],
+  "contributors": [
+    { "name": "Rubén Sospedra", "email": "hello@sospedra.me" }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ithinkdancan/node-semrush.git"
@@ -19,8 +21,7 @@
   "engines": {
     "node": ">= 0.4.0"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "devDependencies": {
     "nodeunit": ">=0.6.2"
   },
@@ -29,5 +30,10 @@
   "bugs": {
     "url": "https://github.com/ithinkdancan/node-semrush/issues"
   },
-  "homepage": "https://github.com/ithinkdancan/node-semrush"
+  "homepage": "https://github.com/ithinkdancan/node-semrush",
+  "dependencies": {
+    "csv-parse": "0.0.6",
+    "http": "0.0.0",
+    "querystring": "^0.2.0"
+  }
 }
