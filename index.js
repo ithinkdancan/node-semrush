@@ -115,7 +115,7 @@ module.exports = SEMRushAPI;
             if(urldata.indexOf('ERROR') === 0){
               cb(new Error('response.error:' + urldata), null);
             } else {
-              csv(urldata, {delimiter: ';', columns: true}, function(err, output){
+              parse(urldata, {delimiter: ';', columns: true}, function(err, output){
                 cb(null, output);
               });
             }
