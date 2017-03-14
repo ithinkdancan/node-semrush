@@ -73,6 +73,18 @@ module.exports = SEMRushAPI;
       this._keywordRequest('phrase_fullsearch', phrase, customParams, cb);
     };
 
+    this.backlinks_overview = function(target, targetType, customParams, cb) {
+      this._targetRequest('backlinks_overview', target, targetType, customParams, cb);
+    };
+
+    this.backlinks = function(target, targetType, customParams, cb) {
+      this._targetRequest('backlinks', target, targetType, customParams, cb);
+    };
+
+    this.backlinks_refdomains = function(target, targetType, customParams, cb) {
+      this._targetRequest('backlinks_refdomains', target, targetType, customParams, cb);
+    };
+
     this._domainRequest = function (type, domain, customParams, cb) {
 
       var params = {
@@ -97,13 +109,24 @@ module.exports = SEMRushAPI;
       this._doRequest(params, customParams, cb);
     };
 
+    this._targetRequest = function (type, target, targetType, customParams, cb) {
+      var params = {
+        type: type,
+        target: target,
+        target_type: targetType,
+        key: this.options.apiKey
+      };
+
+      this._doRequest(params, customParams, cb);
+    };
+
     this._doRequest = function(params, customParams, cb) {
       extend(params, this.defaultParams, customParams);
 
       var path = 'http://' + this.options.hostname + '/?' + querystring.stringify(params);
 
       var req = http.get(path, function(res) {
-        
+
         var data = [];
 
         res
